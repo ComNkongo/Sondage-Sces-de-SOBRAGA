@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sondage SOBRAGA/title</title>
+    <title>NKONGÔ | Sondage SOBRAGA POG</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,15 +23,15 @@
                 <h4>1/ Informations générales</h4>
                 <label for= issue >Age</label>
                 <select id= issue  name= "temps d'utilissation" >
-                    <option value= coupure name="18-25 ans ">18-25 ans </option>
-                    <option value= coupure name="26-35 ans ">26-35 ans </option>
-                    <option value= coupure name="36-50 ans ">36-50 ans </option>
-                    <option value= coupure name="plus de 50 ans ">plus de 50 ans </option>
+                    <option value= 18-25 ans name="18-25 ans ">18-25 ans </option>
+                    <option value= 26-35 ans name="26-35 ans ">26-35 ans </option>
+                    <option value= 36-50 ans name="36-50 ans ">36-50 ans </option>
+                    <option value= plus de 50 ans name="plus de 50 ans ">plus de 50 ans </option>
                 </select>
                 <label for= issue >Genre</label>
-                <select id= issue  name= "temps d'utilissation" >
-                    <option value= coupure name="Homme">Homme</option>
-                    <option value= coupure name="Femme ">Femme </option>
+                <select id= issue  name= "genre de l'utilissation" >
+                    <option value= Homme name="Homme">Homme</option>
+                    <option value= Femme name="Femme ">Femme </option>
                 </select>
             </div>
     
@@ -44,8 +44,15 @@
                 <label for= address >Quartier :</label>
                 <input type= text  id= address  name= "Quartier de l'éméteur"  placeholder= "votre quartier" required>
             </div>
+            <div class= form-group >
+                <label for= address >Téléphone :</label>
+                <input type= number  id= address  name= "Téléphone de l'éméteur"  placeholder= "votre numéro de Téléphone" required>
+            </div>
+            <div class= form-group >
+                <label for= address >Adresse E-mail :</label>
+                <input type= email  id= address  name= "E-mail de l'éméteur"  placeholder= "votre adresse E-mail" required>
+            </div>
     
-      
             <div class= form-group >
                 <h4>Satisfaction des Consommateurs</h4>
                 <label for= consommation>Consommez-vous les produits de SOBRAGA ?</label>
@@ -148,7 +155,7 @@
         </form>
     </div>
     <footer>
-        &copy LionelConcept | 02/2025 |  lionelconcept1@gmail.com
+        <a href="https://lionel-johnson.github.io/LionelConcept">&copy LionelConcept | 02/2025 </a>
     </footer>
 
 </body>
