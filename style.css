@@ -1,31 +1,31 @@
 /* Style général */
-Body {
-    Display : flex ;
-    Justify-content : center ;
-    Align-items : center ;
-    Height : 100%;
-    Margin : 0 ;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
     padding: 0;
-    Background : url(img/biere\ \(2\).jpeg) no-repeat center center scroll ;
+    background: url(img/biere\ \(2\).jpeg) no-repeat center center scroll;
     background-size: cover;
-    Font-family : Arial, sans-serif ;
+    font-family: Arial, sans-serif;
     overflow-y: auto;
 }
 
-@keyframes winEffect{
-    0%{
+@keyframes winEffect {
+    0% {
         background-position: 50% 50%;
     }
-    25%{
+    25% {
         background-position: 48% 52%;
     }
-    50%{
+    50% {
         background-position: 52% 48%;
     }
-    75%{
+    75% {
         background-position: 49% 51%;
     }
-    100%{
+    100% {
         background-position: 50% 50%;
     }
 }
@@ -33,19 +33,19 @@ Body {
 /* Conteneur principal */
 .container {
     min-height: 80vh;
-    Background : rgba(255, 255, 255, 0.9) ;
-    Padding : 20px ;
-    Border-radius : 10px ;
-    Box-shadow : 0 4px 8px rgba(0, 0, 0, 0.2) ;
-    Text-align : center ;
-    Max-width : 600px ;
-    Width : 50% ;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px;
+    width: 50%;
     position: relative;
 }
 
 /* Titre */
-H1, h3, h4, h5{
-    Margin-bottom : 15px ;
+h1, h3, h4, h5 {
+    margin-bottom: 15px;
     color: green;
 }
 
@@ -56,33 +56,33 @@ H1, h3, h4, h5{
     width: 300px;
     max-width: 100px;
     height: auto;
-    Animation : rotation 5s linear infinite ;
+    animation: rotation 5s linear infinite;
     background-color: white;
     border-radius: 50px;
 }
 
 @keyframes rotation {
-    From {
-        Transform : rotate(0deg) ;
+    from {
+        transform: rotate(0deg);
     }
-    To {
-        Transform : rotate(360deg) ;
+    to {
+        transform: rotate(360deg);
     }
 }
 
 /* Formulaire */
-Form {
-    Text-align : left ;
+form {
+    text-align: left;
 }
 
 /* Champs uniformes */
-Input, select, textarea {
-    Width : 100% ;
-    Padding : 10px ;
-    Margin : 10px 0 ;
-    Border : 1px solid #ccc ;
-    Border-radius : 5px ;
-    Font-size : 16px ;
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 /* Bouton */
@@ -95,28 +95,28 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    position: center;
-    transition: all 0.3s ease; /* Ajout d'une transition fluide */
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background: #06783c; /* Changement de couleur de fond au survol */
-    transform: scale(1.05); /* Agrandissement du bouton */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre autour du bouton */
+    background: #06783c;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 button:active {
-    transform: scale(1); /* Réduit la taille quand on clique pour simuler un effet de pression */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre plus petite quand on clique */
+    transform: scale(1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-/* Footer fixe*/
+
+/* Footer fixe */
 footer {
     width: 100%;
-    background: #1e5631;
+    background: #076928;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: relative; /* Reste en bas de page */
+    position: fixed;
     bottom: 0;
 }
 
