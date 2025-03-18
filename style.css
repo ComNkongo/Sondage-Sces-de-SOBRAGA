@@ -1,64 +1,183 @@
-/* Style général */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: url('img/biere\ \(2\).jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
     margin: 0;
     padding: 0;
-    background: url(img/biere\ \(2\).jpeg) no-repeat center center scroll;
-    background-size: cover;
-    font-family: Arial, sans-serif;
-    overflow-y: auto;
 }
 
-@keyframes winEffect {
-    0% {
-        background-position: 50% 50%;
-    }
-    25% {
-        background-position: 48% 52%;
-    }
-    50% {
-        background-position: 52% 48%;
-    }
-    75% {
-        background-position: 49% 51%;
-    }
-    100% {
-        background-position: 50% 50%;
-    }
-}
-
-/* Conteneur principal */
 .container {
-    min-height: 80vh;
-    background: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-top: 20px;
+}
+    .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        margin-top: 20px;
+    }
+    
+    .gradient-title {
+        background: linear-gradient(to right, rgb(4, 80, 4), rgb(3, 87, 24));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+    }
+
+    h1, h2, h4 {
+        color: #055326;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h4 {
+        margin-bottom: 10px;
+    }
+    
+    .logo {
+        text-align: center;
+        margin: 20px 0;
+        animation: rotation 20s infinite linear;
+    }
+    
+    .logo img {
+        width: 170px;
+        background-color: #fff;
+        border-radius: 100px;
+    }
+    
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    form {
+        margin-top: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    button {
+        display: inline-block;
+        background-color: #0056b3;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    button:hover {
+        background-color: #003f7f;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #0056b3;
+        color: #fff;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+    
+    footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    footer a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            width: 90%;
+        }
+    
+        label, input[type="text"], input[type="number"], input[type="email"], select, textarea, button {
+            font-size: 0.9em;
+        }
+    }
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-top: 20px;
+}
+
+h1, h2, h4, h3 {
+    color: #0056b3;
     text-align: center;
-    max-width: 600px;
-    width: 50%;
-    position: relative;
 }
 
-/* Titre */
-h1, h3, h4, h5 {
-    margin-bottom: 15px;
-    color: green;
+h2 {
+    font-size: 1.5em;
+    text-align: center; /* Ensure the text is centered */
 }
 
-/* Rotation continue du logo */
+h4 {
+    margin-bottom: 10px;
+}
+
+.logo {
+    text-align: center;
+    margin: 20px 0;
+    animation: rotation 20s infinite linear;
+}
+
 .logo img {
-    display: block;
-    margin: 20px auto;
-    width: 300px;
-    max-width: 100px;
-    height: auto;
-    animation: rotation 5s linear infinite;
-    background-color: white;
-    border-radius: 50px;
+    width: 150px;
 }
 
 @keyframes rotation {
@@ -70,57 +189,79 @@ h1, h3, h4, h5 {
     }
 }
 
-/* Formulaire */
 form {
-    text-align: left;
+    margin-top: 20px;
 }
 
-/* Champs uniformes */
-input, select, textarea {
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    box-sizing: border-box;
 }
 
-/* Bouton */
+textarea {
+    resize: vertical;
+}
+
 button {
-    width: 50%;
-    padding: 12px;
+    display: inline-block;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
-    background: #007BFF;
-    color: white;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
+    font-size: 1em;
+    margin: 0 auto;
+    display: block;
 }
 
 button:hover {
-    background: #06783c;
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #003f7f;
 }
 
-button:active {
-    transform: scale(1);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer fixe */
 footer {
-    width: 100%;
-    background: #076928;
-    color: white;
     text-align: center;
     padding: 10px 0;
+    background-color: #0056b3;
+    color: #fff;
     position: fixed;
+    width: 100%;
     bottom: 0;
 }
 
-footer p {
-    margin: 0;
-    font-size: 14px;
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    label, input[type="text"], input[type="number"], input[type="email"], select, textarea, button {
+        font-size: 0.9em;
+    }
 }
